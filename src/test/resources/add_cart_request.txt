@@ -1,0 +1,18 @@
+curl 'https://demowebshop.tricentis.com/addproducttocart/details/72/1' \
+  -H 'Accept: */*' \
+  -H 'Accept-Language: en-US,en;q=0.9,ru-RU;q=0.8,ru;q=0.7' \
+  -H 'Connection: keep-alive' \
+  -H 'Content-Type: application/x-www-form-urlencoded; charset=UTF-8' \
+  -H 'Cookie: __utmc=78382081; __utmz=78382081.1664903839.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); ARRAffinity=754c43f3fb666b4689fd8452291c08520e941e1737ad17b31babd87059cc27ae; ARRAffinitySameSite=754c43f3fb666b4689fd8452291c08520e941e1737ad17b31babd87059cc27ae; ASP.NET_SessionId=5pkqzhgzw4cnw4d40sqrcojy; __RequestVerificationToken=RgD4YCznpcUaEplvzM5C8SQrHJKzI_Uymkl9ZQupjJT_u7aliykCJkJtICQhNuKqOC5ROThcfgd2_oEHuqKL2dUdJ4ZIsSWEEpn0ubPm87o1; __utma=78382081.1336912007.1664903839.1674236439.1674238275.7; NOPCOMMERCE.AUTH=C3B23684816523C3E10934D04BB7269BD98869D9B42CE39E423791717071721A102B8200F60C64202EFF08A8BB31019B281869DCC0A013C1BDDB8A2C040B083CB7EE18743398AB5F22BC4F57596FA47732C6ED3EF4505FAC4C44E1324BC72D5D6C434630381EAAD9EF1A5CC8316CAA105B3A34D3709FBA22C343FDCB8F4546262AC16884DD69B73F0ECE3F16DFCBAE2A; Nop.customer=bccc3d3b-96f1-4e02-aef5-52bd4ae25d47; NopCommerce.RecentlyViewedProducts=RecentlyViewedProductIds=72; __atuvc=1%7C3; __atuvs=63cadca6bfda7f01000; __utmt=1; __utmb=78382081.10.10.1674238275' \
+  -H 'Origin: https://demowebshop.tricentis.com' \
+  -H 'Referer: https://demowebshop.tricentis.com/build-your-cheap-own-computer' \
+  -H 'Sec-Fetch-Dest: empty' \
+  -H 'Sec-Fetch-Mode: cors' \
+  -H 'Sec-Fetch-Site: same-origin' \
+  -H 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36' \
+  -H 'X-Requested-With: XMLHttpRequest' \
+  -H 'sec-ch-ua: "Not?A_Brand";v="8", "Chromium";v="108", "Google Chrome";v="108"' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'sec-ch-ua-platform: "Windows"' \
+  --data-raw 'product_attribute_72_5_18=65&product_attribute_72_6_19=54&product_attribute_72_3_20=57&product_attribute_72_8_30=94&addtocart_72.EnteredQuantity=3' \
+  --compressed
