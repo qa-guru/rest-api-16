@@ -1,10 +1,12 @@
 package tests;
 
 import io.qameta.allure.restassured.AllureRestAssured;
+import io.restassured.RestAssured;
 import models.lombok.LoginBodyLombokModel;
 import models.lombok.LoginResponseLombokModel;
 import models.pojo.LoginBodyPojoModel;
 import models.pojo.LoginResponsePojoModel;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import static helpers.CustomApiListener.withCustomTemplates;
@@ -12,6 +14,8 @@ import static io.restassured.RestAssured.given;
 import static io.restassured.http.ContentType.JSON;
 import static org.hamcrest.Matchers.is;
 import static org.assertj.core.api.Assertions.assertThat;
+import static specs.LoginSpecs.loginRequestSpec;
+import static specs.LoginSpecs.loginResponseSpec;
 
 public class ReqresInExtendedTests {
 
@@ -104,7 +108,6 @@ public class ReqresInExtendedTests {
         assertThat(response.getToken()).isEqualTo("QpwL5tke4Pnpja7X4");
     }
 
-
     @Test
     void loginWithCustomListenerTest() {
         LoginBodyLombokModel data = new LoginBodyLombokModel();
@@ -129,4 +132,20 @@ public class ReqresInExtendedTests {
         assertThat(response.getToken()).isEqualTo("QpwL5tke4Pnpja7X4");
     }
 
+    @Test
+    void loginWithSpecsTest() {
+        LoginBodyLombokModel data = new LoginBodyLombokModel();
+        data.setEmail("eve.holt@reqres.in");
+        data.setPassword("cityslicka");
+
+        LoginResponseLombokModel response = given(loginRequestSpec)
+                .body(data)
+                .when()
+                .post("/login")
+                .then()
+                .spec(loginResponseSpec)
+                .extract().as(LoginResponseLombokModel.class);
+
+        assertThat(response.getToken()).isEqualTo("QpwL5tke4Pnpja7X4");
+    }
 }
